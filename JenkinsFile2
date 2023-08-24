@@ -5,13 +5,13 @@ pipeline {
                                            steps {
                                                   echo 'Hi, this is Angela  from Tunisia'
                                                }
-                     }
+                            }
                             stage('Two') { 
                                        steps {
                                             input('Do you want to proceed?')
                                            }
-                     }
-                    stage('Three') {
+                          }
+                          stage('Three') {
                                when {
                                      not {
                                              branch "master"
@@ -20,8 +20,8 @@ pipeline {
                                steps {
                                           echo "Hello"
                                  }
-                   }
-                   ﻿stage('Four') {
+                          }
+                          ﻿stage('Four') {
                                  parallel {
                                         stage('Unit Test') {
                                                                        steps {
